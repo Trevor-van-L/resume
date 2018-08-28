@@ -1,0 +1,149 @@
+\documentclass[a4paper,10pt]{article}
+
+% With thanks to Alessandro Plasmati for the basic LaTeX template used here: https://www.sharelatex.com/templates/cv-or-resume/professional-cv
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[margin=0.5in]{geometry}
+
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
+
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{titlesec}					%custom \section
+
+\usepackage{tabularx}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.60\paperheight}
+\setlength{\parindent}{0pt}
+
+%% define a few struts
+%% (from code by Claudio Beccari in TeX and TUG News, Vol. 2, 1993)
+\newcommand\Tstrut{\rule{0pt}{2.9ex}}         % "top" strut
+\newcommand\Bstrut{\rule[-1.2ex]{0pt}{0pt}}   % "bottom" strut
+\newcommand\TBstrut{\Tstrut\Bstrut}           % "top and bottom" strut
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge \textsc{Trevor van Leeuwen}
+	}\bigskip\par}
+\par{
+	\begin{tabularx}{\textwidth}{c X c c}
+		\hline
+		& &
+		(613) 600-7104 & \href{mailto:tvanleeuwen@edu.uwaterloo.ca}{tvanleeuwen@edu.uwaterloo.ca} \TBstrut \\
+		\hline
+	\end{tabularx}
+}
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Technical Skills}
+
+\begin{tabular}{rl}
+    \textsc{Proficient In:} & C/C++, Java, SQL, Ruby on Rails \\
+    \textsc{Familiar With:} & Python, Perl, Verilog, ARM Assembly, Javascript, MATLAB \\
+   	\textsc{Tools:} & Git, GDB, WinDbg, Jira \\
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+
+% Format for NEW sections is as follows
+
+% & POSITION at \textsc{COMPANY}, LOCATION \\ \textsc{DATE} & \emph{FURTHER POSITION DESCRIPTION, e.g. team}TEXT HERE}\\
+%&\footnotesize{TEXT}\\
+%&\footnotesize{MORE TEXT}\\
+%...
+%\multicolumn{2}{c}{•} \\   if another section is to come after the first one
+
+\begin{tabular}{r|p{15.4cm}}
+& File System Developer at \textsc{Microsoft} \\ \textsc{Aug-Dec 2017}
+&\footnotesize{Desgined \& implemented end-to-end dehydrated \& deferred cloud file copy protocol in NTFS, saving significant bandwitdth and disk space when a copy is issued on cloud-stored files (i.e. on OneDrive)}\\
+&\footnotesize{Filed patent for the cloud copying technique}\\
+&\footnotesize{Implemented various performance improvements and bugfixes for NTFS}\\
+
+\multicolumn{2}{c}{} \\
+& Database Developer at \textsc{Magna International} \\ \textsc{Aug-Dec 2016}
+&\footnotesize{Overhauled Defect Detection \& Classification system backend to improve mean query time 5*}\\
+&\footnotesize{Refactored mould operator interfaces to eliminate 95\% of dropped database connections}\\
+&\footnotesize{Optimised database server job scheduling to dramatically improve average performance}\\
+
+\multicolumn{2}{c}{} \\
+& Full Stack Developer at \textsc{Shopify} \\
+\textsc{Jan-Apr 2016}
+&\footnotesize{Created mobile phone payment method for customers in developing countries}\\
+&\footnotesize{Improved resiliency of accounting software integrations (Xero \& Intuit), reducing unhandled exceptions by 35\%}\\
+
+\multicolumn{2}{c}{} \\
+& Rapid Prototype Developer at \textsc{TD Canada Trust}\\
+\textsc{May-Aug 2015}
+&\footnotesize{Rapidly created web \& Android prototypes involving new technologies for banking (e.g. internet of things), bringing them from ideation to minimum viable product in 4 week sprints}\\
+
+\multicolumn{2}{c}{}\\
+& Software/Tool Developer at \textsc{Nanometrics} \\
+\textsc{Sept-Dec 2014}
+&\footnotesize{Developed software \& firmware for seismometers}\\
+&\footnotesize{Verified \& debugged prototype PCBs in the lab}\\
+
+\multicolumn{2}{c}{} \\
+& Backend Web Developer at \textsc{Recognia} \\
+\textsc{Jan-Apr 2014}
+& \footnotesize{Built backend \& API for website for technical analysis of financial instruments}
+\end{tabular}
+
+\section{Projects}
+\begin{itemize}
+	\item {\textsc{Chorus - Inexpensive High Quality Recording (Capstone Project)}}
+	\begin{itemize}
+		\item {\footnotesize{Created a system to allow amateur musicians to record better quality vocal/instrumental tracks using easily acessible microphones (i.e. cell phones, laptops) by applying digital signal processing \& machine learning techniques.}}
+	\end{itemize}
+
+	\item {\textsc{UW Autonomous Sailboat Team}}
+	\begin{itemize}
+		\item {\footnotesize{Created automatic sail trim control system for an RC sailboat in hardware, and implemented autonomous path planning software, with the goal of racing with zero human input.}}
+	\end{itemize}
+\end{itemize}
+
+\section{Education}
+\textbf{University of Waterloo}, Waterloo, Canada
+\begin{itemize}
+    \item{\footnotesize{Bachelor of Applied Science, \textsc{\textbf{Computer Engineering}}, 2018. With Distinction}}
+\end{itemize}
+
+\section{Interests and Activities}
+\begin{itemize}
+	\item {\footnotesize{Demonstrated leadership through directorships in Orientation Week, Engineering Society \& Grad. Committee}}
+	\item {\footnotesize{Competitive collegiate e-sports: Team co-ordinator for UW Heroes of the Storm; Team captain for Hearthstone}}
+	\item {\footnotesize{Competitive sailor, avid cross-country skier, amateur saxophone player}}
+\end{itemize}
+
+\end{document}
