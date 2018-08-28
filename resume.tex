@@ -9,6 +9,7 @@
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[margin=0.5in]{geometry}
+\usepackage{multirow}
 
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
 
@@ -53,17 +54,14 @@ ItalicFont = Fontin-Italic.otf
 \font\fb=''[cmr10]'' %for use with \LaTeX command
 
 %--------------------TITLE-------------
-\par{\centering
-		{\Huge \textsc{Trevor van Leeuwen}
-	}\bigskip\par}
 \par{
-	\begin{tabularx}{\textwidth}{c X c c}
-		\hline
-		& &
-		(613) 600-7104 & \href{mailto:tvanleeuwen@edu.uwaterloo.ca}{tvanleeuwen@edu.uwaterloo.ca} \TBstrut \\
-		\hline
-	\end{tabularx}
-}
+    \begin{tabular}{lr}
+
+        \multirow{2}{12.9cm}{\Huge{\textsc{Trevor van Leeuwen}}} & \href{mailto:tvanleeuwen@edu.uwaterloo.ca}{tvanleeuwen@edu.uwaterloo.ca} \\
+         & +1 (613) 600-7104
+    \end{tabular}
+\bigskip\par}
+
 %--------------------SECTIONS-----------------------------------
 %Section: Personal Data
 \section{Technical Skills}
@@ -94,8 +92,7 @@ ItalicFont = Fontin-Italic.otf
 \multicolumn{2}{c}{} \\
 & Database Developer at \textsc{Magna International} \\ \textsc{Aug-Dec 2016}
 &\footnotesize{Overhauled Defect Detection \& Classification system backend to improve mean query time 5*}\\
-&\footnotesize{Refactored mould operator interfaces to eliminate 95\% of dropped database connections}\\
-&\footnotesize{Optimised database server job scheduling to dramatically improve average performance}\\
+&\footnotesize{Optimised database server job scheduling to eliminate performance bottlenecks}\\
 
 \multicolumn{2}{c}{} \\
 & Full Stack Developer at \textsc{Shopify} \\
@@ -136,14 +133,14 @@ ItalicFont = Fontin-Italic.otf
 \section{Education}
 \textbf{University of Waterloo}, Waterloo, Canada
 \begin{itemize}
-    \item{\footnotesize{Bachelor of Applied Science, \textsc{\textbf{Computer Engineering}}, 2018. With Distinction}}
+    \item{Bachelor of Applied Science, \textsc{\textbf{Computer Engineering}}, 2018. With Distinction}
 \end{itemize}
 
 \section{Interests and Activities}
 \begin{itemize}
-	\item {\footnotesize{Demonstrated leadership through directorships in Orientation Week, Engineering Society \& Grad. Committee}}
-	\item {\footnotesize{Competitive collegiate e-sports: Team co-ordinator for UW Heroes of the Storm; Team captain for Hearthstone}}
-	\item {\footnotesize{Competitive sailor, avid cross-country skier, amateur saxophone player}}
+	\item {Demonstrated leadership through directorships in Orientation Week, Engineering Society \& Grad. Committee}
+	\item {Competitive collegiate e-sports: Team co-ordinator for UW Heroes of the Storm; Team captain for Hearthstone}
+	\item {Competitive sailor, avid cross-country skier, amateur saxophone player}
 \end{itemize}
 
 \end{document}
