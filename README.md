@@ -1,3 +1,5 @@
 My personal resume, written in LaTeX.
 
-With thanks to Alessandro Plasmati for the basic LaTeX template: https://www.sharelatex.com/templates/cv-or-resume/professional-cv
+Started from Alessandro Plasmati's basic LaTeX template: https://www.sharelatex.com/templates/cv-or-resume/professional-cv
+
+Some more inspiration on how to get the columns working taken from deedy-resume: https://github.com/deedy/Deedy-Resume

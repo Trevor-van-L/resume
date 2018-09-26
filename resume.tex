@@ -63,57 +63,58 @@ ItalicFont = Fontin-Italic.otf
 \bigskip\par}
 
 %--------------------SECTIONS-----------------------------------
-%Section: Personal Data
-\section{Technical Skills}
 
-\begin{tabular}{rl}
-    \textsc{Proficient In:} & C/C++, Java, SQL, Ruby on Rails \\
-    \textsc{Familiar With:} & Python, Perl, Verilog, ARM Assembly, Javascript, Bash \\
-   	\textsc{Tools:} & Git, GDB, WinDbg, OpenMP/OpenCL, Valgrind suite, \LaTeX \\
-\end{tabular}
+%--------------------COLUMN ONE---------------------------------
+% Top left. Read first, so this is the important one. Work Experience, projects.
+% Other stuff (less impressive but still important) goes in column two, which is read second
+% Inversion of the typical two-column dynamic which I see but makes more sense.
+
+\begin{minipage}[t]{0.66\textwidth} %This will break if we overflow vertically.
 
 %Section: Work Experience at the top
 \section{Work Experience}
 
 % Format for NEW sections is as follows
 
-% & POSITION at \textsc{COMPANY}, LOCATION \\ \textsc{DATE} & \emph{FURTHER POSITION DESCRIPTION, e.g. team}TEXT HERE}\\
+% & POSITION at \textsc{COMPANY}, LOCATION \\ \textsc{DATE} & \emph{FURTHER POSITION DESCRIPTION, e.g. team TEXT HERE}\\
 %&\footnotesize{TEXT}\\
 %&\footnotesize{MORE TEXT}\\
-%...
-%\multicolumn{2}{c}{•} \\   if another section is to come after the first one
 
-\begin{tabular}{r|p{15.4cm}}
-& File System Developer at \textsc{Microsoft} \\ \textsc{Aug-Dec 2017}
-&\footnotesize{Desgined \& implemented end-to-end dehydrated cloud file copy protocol in NTFS, saving significant bandwitdth and disk space when a copy is issued on cloud-stored files (i.e. on OneDrive)}\\
-&\footnotesize{Filed patent for the cloud copying technique}\\
-&\footnotesize{Implemented various performance improvements and bugfixes for NTFS}\\
+File System Developer at \textsc{Microsoft} \textsc{Aug-Dec 2017}
 
-\multicolumn{2}{c}{} \\
-& Database Developer at \textsc{Magna International} \\ \textsc{Aug-Dec 2016}
-&\footnotesize{Overhauled Defect Detection \& Classification system backend to improve mean query time by a factor of 5}\\
-&\footnotesize{Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked}\\
-&\footnotesize{Implemented automatic reconnection for dropped mould HMI connections, saving 10 man-hours per week}\\
+\begin{itemize}
+    \item {\footnotesize{Desgined \& implemented end-to-end dehydrated cloud file copy protocol in NTFS, saving significant bandwitdth and disk space when a copy is issued on cloud-stored files (i.e. on OneDrive)}}
+    \item {\footnotesize{Filed patent for the cloud copying technique}}
+    \item {\footnotesize{Implemented various performance improvements and bugfixes for NTFS}}
+\end{itemize}
+
+Database Developer at \textsc{Magna International} \textsc{Aug-Dec 2016}
+\begin{itemize}
+    \item {\footnotesize{Overhauled Defect Detection \& Classification system backend to improve mean query time by a factor of 5}}
+    \item {\footnotesize{Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked}}
+    \item {\footnotesize{Implemented automatic reconnection for dropped mould HMI connections, saving 10 man-hours per week}}
+\end{itemize}
 
 
-\multicolumn{2}{c}{} \\
-& Full Stack Developer at \textsc{Shopify} \\
-\textsc{Jan-Apr 2016}
-&\footnotesize{Created mobile phone payment method for customers in developing countries}\\
-&\footnotesize{Improved resiliency of accounting software integrations (Xero \& Intuit), reducing unhandled exceptions by 35\%}\\
-&\footnotesize{Created Postmates and UberRush local delivery integrations}\\
+Full Stack Developer at \textsc{Shopify}    \textsc{Jan-Apr 2016}
+\begin{itemize}
+    \item {\footnotesize{Created mobile phone payment method for customers in developing countries}}
+    \item {\footnotesize{Improved resiliency of accounting software integrations (Xero \& Intuit), reducing unhandled exceptions by 35\%}}
+    \item {\footnotesize{Created Postmates and UberRush local delivery integrations}}
+\end{itemize}
 
-\multicolumn{2}{c}{} \\
-& Rapid Prototype Developer at \textsc{TD Canada Trust}\\
-\textsc{May-Aug 2015}
-&\footnotesize{Rapidly created web \& Android prototypes involving new technologies for banking (e.g. internet of things), bringing them from ideation to minimum viable product in 4 week sprints}\\
 
-\multicolumn{2}{c}{}\\
-& Software/Tool Developer at \textsc{Nanometrics} \\
-\textsc{Sept-Dec 2014}
-&\footnotesize{Developed software \& firmware for seismometers}\\
-&\footnotesize{Verified \& debugged prototype PCBs in the lab}\\
-\end{tabular}
+Rapid Prototype Developer at \textsc{TD Canada Trust}  \textsc{May-Aug 2015}
+\begin{itemize}
+    \item {\footnotesize{Rapidly created web \& Android prototypes involving new technologies for banking (e.g. internet of things), bringing them from ideation to minimum viable product in 4 week sprints}}
+\end{itemize}
+
+
+Software/Tool Developer at \textsc{Nanometrics}  \textsc{Sept-Dec 2014}
+\begin{itemize}
+    \item {\footnotesize{Developed software \& firmware for seismometers}}
+    \item {\footnotesize{Verified \& debugged prototype PCBs in the lab}}
+\end{itemize}
 
 \section{Projects}
 \begin{itemize}
@@ -127,6 +128,22 @@ ItalicFont = Fontin-Italic.otf
 		\item {Implemented autonomous path planning software, and created automatic sail trim control system for an RC sailboat in hardware. The boat is to race with zero human input}
 	\end{itemize}
 \end{itemize}
+
+%-------------------COLUMN TWO---------------------------------
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.33\textwidth}
+
+
+%Section: Personal Data
+\section{Technical Skills}
+
+\textsc{Proficient In:} C/C++, Java, SQL, Ruby on Rails \\
+\textsc{Familiar With:} Python, Perl, Verilog, ARM Assembly, Javascript, Bash \\
+ \textsc{Tools:} Git, GDB, WinDbg, OpenMP/OpenCL, Valgrind suite, \LaTeX \\
+
+
 
 \section{Education}
 \textbf{University of Waterloo}, Waterloo, Canada
@@ -144,5 +161,8 @@ ItalicFont = Fontin-Italic.otf
 	\item {Competitive sailor, avid cross-country skier, amateur saxophone player}
     \item {Fluent in English and French, basic knowledge of Dutch}
 \end{itemize}
+
+
+\end{minipage}
 
 \end{document}
