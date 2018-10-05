@@ -69,84 +69,111 @@ ItalicFont = Fontin-Italic.otf
 % Other stuff (less impressive but still important) goes in column two, which is read second
 % Inversion of the typical two-column dynamic which I see but makes more sense.
 
-\begin{minipage}[t]{0.66\textwidth} %This will break if we overflow vertically.
+\begin{minipage}[t]{0.60\textwidth} %This will break if we overflow vertically.
 
 %Section: Work Experience at the top
 \section{Work Experience}
+\medskip
 
-% Format for NEW sections is as follows
-
-% & POSITION at \textsc{COMPANY}, LOCATION \\ \textsc{DATE} & \emph{FURTHER POSITION DESCRIPTION, e.g. team TEXT HERE}\\
-%&\footnotesize{TEXT}\\
-%&\footnotesize{MORE TEXT}\\
-
-File System Developer at \textsc{Microsoft} \textsc{Aug-Dec 2017}
-
+\begin{large}
+File System Developer at \textsc{Microsoft}
+\end{large}
+\hfill Aug-Dec 2017
+\smallskip
 \begin{itemize}
-    \item {\footnotesize{Desgined \& implemented end-to-end dehydrated cloud file copy protocol in NTFS, saving significant bandwitdth and disk space when a copy is issued on cloud-stored files (i.e. on OneDrive)}}
-    \item {\footnotesize{Filed patent for the cloud copying technique}}
-    \item {\footnotesize{Implemented various performance improvements and bugfixes for NTFS}}
+    \item {Desgined \& implemented end-to-end dehydrated cloud file copy protocol in \textbf{NTFS}, saving significant bandwitdth and disk space when a copy is issued on cloud-stored files (i.e. on OneDrive)}
+    \item {Filed patent for the cloud copying technique}   %TODO: improve phrasing
+    \item {Implemented various performance improvements and bugfixes for NTFS}
+\end{itemize}
+\bigskip
+
+\begin{large}
+Database Developer at \textsc{Magna International}
+\end{large}
+\hfill Aug-Dec 2016
+\smallskip
+\begin{itemize}
+    \item {Overhauled Defect Detection \& Classification system backend to improve mean query time by a factor of 5}
+    \item {Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked}
+    \item {Implemented automatic reconnection for dropped mould HMI connections, saving 10 man-hours per week}
+\end{itemize}
+\bigskip
+
+\begin{large}
+Full Stack Developer at \textsc{Shopify}
+\end{large}
+\hfill Jan-Apr 2016
+\smallskip
+\begin{itemize}
+    \item {Created mobile phone payment method for customers in developing countries}
+    \item {Improved resiliency of accounting software integrations (Xero \& Intuit), reducing unhandled exceptions by 35\%}
+    \item {Created Postmates and UberRush local delivery integrations}
+\end{itemize}
+\bigskip
+
+\begin{large}
+Android Developer at \textsc{TD Canada Trust}
+\end{large}
+\hfill  May-Aug 2015
+\smallskip
+\begin{itemize}
+    \item {Rapidly created web \& Android prototypes involving new technologies for banking (e.g. internet of things), bringing them from ideation to minimum viable product in 4 week sprints} %TODO: More detail, especially for android positions
+\end{itemize}
+\bigskip
+
+\begin{large}
+Software/Tool Developer at \textsc{Nanometrics}
+\end{large}
+\hfill Sept-Dec 2014
+\smallskip
+\begin{itemize}
+    \item {Developed software \& firmware for seismometers}
+    \item {Verified \& debugged prototype PCBs}
+\end{itemize}
+\bigskip
+
+\begin{large}
+Backend Developer at \textsc{Recognia}
+\end{large}
+\hfill Jan-Apr 2016
+\begin{itemize}
+    \item{Built backend \& API for website for technical analysis of financial instruments}
+    \item{Created new caching strategy, reducing cache misses 60\%}
 \end{itemize}
 
-Database Developer at \textsc{Magna International} \textsc{Aug-Dec 2016}
-\begin{itemize}
-    \item {\footnotesize{Overhauled Defect Detection \& Classification system backend to improve mean query time by a factor of 5}}
-    \item {\footnotesize{Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked}}
-    \item {\footnotesize{Implemented automatic reconnection for dropped mould HMI connections, saving 10 man-hours per week}}
-\end{itemize}
-
-
-Full Stack Developer at \textsc{Shopify}    \textsc{Jan-Apr 2016}
-\begin{itemize}
-    \item {\footnotesize{Created mobile phone payment method for customers in developing countries}}
-    \item {\footnotesize{Improved resiliency of accounting software integrations (Xero \& Intuit), reducing unhandled exceptions by 35\%}}
-    \item {\footnotesize{Created Postmates and UberRush local delivery integrations}}
-\end{itemize}
-
-
-Rapid Prototype Developer at \textsc{TD Canada Trust}  \textsc{May-Aug 2015}
-\begin{itemize}
-    \item {\footnotesize{Rapidly created web \& Android prototypes involving new technologies for banking (e.g. internet of things), bringing them from ideation to minimum viable product in 4 week sprints}}
-\end{itemize}
-
-
-Software/Tool Developer at \textsc{Nanometrics}  \textsc{Sept-Dec 2014}
-\begin{itemize}
-    \item {\footnotesize{Developed software \& firmware for seismometers}}
-    \item {\footnotesize{Verified \& debugged prototype PCBs in the lab}}
-\end{itemize}
+\bigskip
 
 \section{Projects}
+\smallskip
+\textsc{Chorus} - Inexpensive High Quality Recording (Capstone Project)
 \begin{itemize}
-	\item {\textsc{Chorus - Inexpensive High Quality Recording (Capstone Project)}}
-	\begin{itemize}
-		\item {Using machine learning and digital signal processing techniques, created a system to allow amateur musicians to record better quality vocal/instrumental tracks using readily available microphones (cell phones, laptops)}
-	\end{itemize}
+	\item {Using machine learning and digital signal processing techniques, created a system to allow amateur musicians to record better quality vocal/instrumental tracks using readily available microphones (cell phones, laptops)}
+\end{itemize}
 
-	\item {\textsc{UW Autonomous Sailboat Team}}
-	\begin{itemize}
-		\item {Implemented autonomous path planning software, and created automatic sail trim control system for an RC sailboat in hardware. The boat is to race with zero human input}
-	\end{itemize}
+\bigskip
+
+\textsc{UW Autonomous Sailboat Team}
+\begin{itemize}
+	\item {Implemented autonomous path planning software, and created automatic sail trim control system for an RC sailboat in hardware. The boat is to race with zero human input}
 \end{itemize}
 
 %-------------------COLUMN TWO---------------------------------
 
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.33\textwidth}
-
+\begin{minipage}[t]{0.36\textwidth}
 
 %Section: Personal Data
 \section{Technical Skills}
+\medskip
 
 \textsc{Proficient In:} C/C++, Java, SQL, Ruby on Rails \\
 \textsc{Familiar With:} Python, Perl, Verilog, ARM Assembly, Javascript, Bash \\
- \textsc{Tools:} Git, GDB, WinDbg, OpenMP/OpenCL, Valgrind suite, \LaTeX \\
-
-
+\textsc{Tools:} Git, GDB, WinDbg, OpenMP/OpenCL, Valgrind suite, \LaTeX \\
 
 \section{Education}
 \textbf{University of Waterloo}, Waterloo, Canada
+\medskip
 \begin{itemize}
     \item{Bachelor of Applied Science, \textsc{\textbf{Computer Engineering}}, 2018. With Distinction}
     \begin{itemize}
@@ -154,7 +181,10 @@ Software/Tool Developer at \textsc{Nanometrics}  \textsc{Sept-Dec 2014}
     \end{itemize}
 \end{itemize}
 
+\medskip
+
 \section{Interests and Activities}
+\medskip
 \begin{itemize}
 	\item {Leadership roles in UWaterloo Orientation Week, Engineering Society \& Graduation Committee}
 	\item {Competitive collegiate e-sports: Team co-ordinator for UW Heroes of the Storm, Team captain for Hearthstone}
