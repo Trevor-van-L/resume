@@ -6,7 +6,7 @@
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[left=0.5in, top=0.5in, right=0.65in, bottom=0.75in]{geometry}
 \usepackage{multirow}
 
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
@@ -71,7 +71,7 @@ ItalicFont = Fontin-Italic.otf
 % Other stuff (less impressive but still important) goes in column two, which is read second
 % Inversion of the typical two-column dynamic which I see but makes more sense.
 
-\begin{minipage}[t]{0.60\textwidth} %This will break if we overflow vertically.
+\begin{minipage}[t]{0.6\textwidth} %This will break if we overflow vertically.
 
 %Section: Work Experience at the top
 \section{Work Experience}
@@ -87,7 +87,7 @@ C, C++ \hfill Aug-Dec 2017
 \begin{itemize}
     \item {Desgined \& implemented end-to-end dehydrated cloud file copy protocol in \textbf{NTFS}, saving significant bandwitdth and disk space when a copy is issued on cloud-stored files (i.e. on OneDrive)}
     \item {Filed patent on the cloud copying technique}   %TODO: improve phrasing
-    \item {Various performance improvements and bugfixes for NTFS}
+    \item {Performance improvements for NTFS handling of primitives with cloud files (moves, deletes)}
     \item {Improved internal testing tools for cloud file systems, adding significantly more structure and easing integration of new features}
 \end{itemize}
 \bigskip
@@ -100,9 +100,9 @@ Database Developer, \textsc{Magna International}
 MySQL, VB.NET \hfill Aug-Dec 2016
 \end{footnotesize}
 \begin{itemize}
-    \item {Overhauled Defect Detection \& Classification system backend to improve mean query time by a factor of 5. Resulted in reduced load on the servers, delaying the need to upgrade}
+    \item {Overhauled Defect Detection \& Classification system backend to improve mean query time by a factor of 5}
     \item {Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked. Previously 15\% of defects were not tracked, negatively affecting ability of process \& maintenance teams to fix problems}
-    \item {Implemented automatic reconnection for dropped mould HMI connections, saving 10 man-hours per week}
+\comment{    \item {Implemented automatic reconnection for dropped mould HMI connections, saving 10 man-hours per week}}
 \end{itemize}
 \bigskip
 
@@ -130,7 +130,7 @@ Java (Android), PostgreSQL \hfill May-Aug 2015
 \begin{itemize}
     \item{Prototyped Android apps to explore new technologies applied to banking (e.g. internet of things)}
 \end{itemize}
-\bigskip
+\medskip
 
 \comment{
 \begin{large}
@@ -164,7 +164,7 @@ Java, Perl, PostgreSQL, AngularJS \hfill Jan-Apr 2016
 \section{Projects}
 \smallskip
 \begin{large}
-\textsc{Chorus} - Inexpensive High Quality Recording (Capstone Project) \\
+\textsc{Chorus} - Inexpensive High Quality Recording (Capstone) \\
 \end{large}
 \begin{footnotesize}
 Python, MATLAB, PyTorch, FASST
@@ -185,14 +185,14 @@ Python
 \end{footnotesize}
 \smallskip
 \begin{itemize}
-	\item {Implemented autonomous path planning software, and created automatic sail trim control system for an RC sailboat in hardware. The boat is to race with zero human input}
+	\item {Implemented autonomous path planning software, and created hardware automatic sail trim system for model sailboat. The boat will race with zero human input}
 \end{itemize}
 
 %-------------------COLUMN TWO---------------------------------
 
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.36\textwidth}
+\begin{minipage}[t]{0.34\textwidth}
 
 %Section: Personal Data
 \section{Technical Skills}
@@ -202,8 +202,8 @@ Python
 \begin{tabularx}{\linewidth}{r | X}
 
 \textsc{Proficient} & C/C++, Java, SQL, Ruby on Rails \\
-\textsc{Familiar} & Python, Perl, Verilog, ARM Assembly, Javascript, Bash \\
-\textsc{Tools} & Git, GDB, WinDbg, OpenMP/OpenCL, Valgrind suite, \LaTeX \\
+\textsc{Familiar} & Python, Perl, Bash, Verilog, Javascript \\
+\textsc{Tools} & Git, \LaTeX, GDB, WinDbg, Valgrind suite, OpenMP \& OpenCL \\
 
 \end{tabularx}
 \renewcommand{\arraystretch}{1}
@@ -211,12 +211,10 @@ Python
 
 \section{Education}
 \textbf{University of Waterloo}, Waterloo, Canada
-\medskip
+\smallskip
 \begin{itemize}
     \item{Bachelor of Applied Science, \textsc{\textbf{Computer Engineering}}, 2018. With Distinction}
-    \begin{itemize}
-        \item {\footnotesize{Key courses: Programming for Performance, Digital Signal and Image Processing, Computer Architecture, Embedded Systems, Computer Security, Operating Systems, Data Structures and Algorithms}}
-    \end{itemize}
+    \item {\footnotesize{Key courses: Programming for Performance, Digital Signal and Image Processing, Computer Architecture, Embedded Systems, Computer Security, Operating Systems, Data Structures and Algorithms}}
 \end{itemize}
 
 \medskip
