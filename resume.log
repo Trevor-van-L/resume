@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.8.27)  10 OCT 2018 23:21
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.8.27)  10 OCT 2018 23:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -845,12 +845,6 @@ Overfull \hbox (2.12546pt too wide) in paragraph at lines 60--65
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 213--215
-[]\EU1/Fontin.otf(0)/bx/n/10 University of Waterloo\EU1/Fontin.otf(0)/m/n/10 , 
-Waterloo,
- []
-
-
 Underfull \hbox (badness 3503) in paragraph at lines 217--218
 []\EU1/Fontin.otf(0)/m/n/8 Key courses: Programming for Perfor-
  []
