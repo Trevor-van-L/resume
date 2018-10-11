@@ -46,6 +46,10 @@ ItalicFont = Fontin-Italic.otf
 \newcommand\Bstrut{\rule[-1.2ex]{0pt}{0pt}}   % "bottom" strut
 \newcommand\TBstrut{\Tstrut\Bstrut}           % "top and bottom" strut
 
+%% for multiline comments -- excluding old jobs, but keeping data for e.g. CV
+%% in future can use ifs for toggling on/off
+\newcommand{\comment}[1]{}
+
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
 
@@ -76,83 +80,112 @@ ItalicFont = Fontin-Italic.otf
 \medskip
 
 \begin{large}
-File System Developer at \textsc{Microsoft}
-\end{large}
-\hfill Aug-Dec 2017
-\smallskip
+File System Developer, \textsc{Microsoft}
+\end{large}\\
+\medskip
+\begin{footnotesize}
+C, C++ \hfill Aug-Dec 2017
+\end{footnotesize}
 \begin{itemize}
     \item {Desgined \& implemented end-to-end dehydrated cloud file copy protocol in \textbf{NTFS}, saving significant bandwitdth and disk space when a copy is issued on cloud-stored files (i.e. on OneDrive)}
-    \item {Filed patent for the cloud copying technique}   %TODO: improve phrasing
+    \item {Filed patent on the cloud copying technique}   %TODO: improve phrasing
     \item {Implemented various performance improvements and bugfixes for NTFS}
+    \item {Improved internal testing tools for cloud file systems, adding significantly more structure and easing integration of new features}
 \end{itemize}
 \bigskip
 
 \begin{large}
-Database Developer at \textsc{Magna International}
-\end{large}
-\hfill Aug-Dec 2016
-\smallskip
+Database Developer, \textsc{Magna International}
+\end{large}\\
+\medskip
+\begin{footnotesize}
+MySQL, VB.NET \hfill Aug-Dec 2016
+\end{footnotesize}
 \begin{itemize}
-    \item {Overhauled Defect Detection \& Classification system backend to improve mean query time by a factor of 5}
-    \item {Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked}
+    \item {Overhauled Defect Detection \& Classification system backend to improve mean query time by a factor of 5. Resulted in reduced load on the servers, delaying the need to upgrade}
+    \item {Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked. Previously 15\% of defects were not tracked, negatively affecting ability of process \& maintenance teams to fix problems}
     \item {Implemented automatic reconnection for dropped mould HMI connections, saving 10 man-hours per week}
 \end{itemize}
 \bigskip
 
 \begin{large}
-Full Stack Developer at \textsc{Shopify}
-\end{large}
-\hfill Jan-Apr 2016
-\smallskip
+Full Stack Developer, \textsc{Shopify}
+\end{large}\\
+\medskip
+\begin{footnotesize}
+Ruby on Rails, MySQL \hfill Jan-Apr 2016
+\end{footnotesize}
 \begin{itemize}
-    \item {Created mobile phone payment method for customers in developing countries}
+    \item {Created mobile phone payment method for merchants in developing countries, especially those with low credit card penetration}
     \item {Improved resiliency of accounting software integrations (Xero \& Intuit), reducing unhandled exceptions by 35\%}
-    \item {Created Postmates and UberRush local delivery integrations}
+    \item {Created Postmates and UberRush local delivery integrations, allowing merchants to get product to customers within hours}
 \end{itemize}
 \bigskip
 
 \begin{large}
-Android Developer at \textsc{TD Canada Trust}
-\end{large}
-\hfill  May-Aug 2015
-\smallskip
+Android Developer, \textsc{TD Canada Trust}
+\end{large} \\
+\medskip
+\begin{footnotesize}
+Java (Android), PostgreSQL \hfill May-Aug 2015
+\end{footnotesize}
 \begin{itemize}
-    \item {Rapidly created web \& Android prototypes involving new technologies for banking (e.g. internet of things), bringing them from ideation to minimum viable product in 4 week sprints} %TODO: More detail, especially for android positions
+    \item{Prototyped Android apps to explore new technologies applied to banking (e.g. internet of things)}
 \end{itemize}
 \bigskip
 
+\comment{
 \begin{large}
-Software/Tool Developer at \textsc{Nanometrics}
-\end{large}
-\hfill Sept-Dec 2014
-\smallskip
+Software/Tool Developer, \textsc{Nanometrics}
+\end{large} \\
+\medskip
+\begin{footnotesize}
+Groovy, C++, bash \hfill Sept-Dec 2014
+\end{footnotesize}
 \begin{itemize}
     \item {Developed software \& firmware for seismometers}
     \item {Verified \& debugged prototype PCBs}
 \end{itemize}
 \bigskip
+}
 
+\comment{
 \begin{large}
-Backend Developer at \textsc{Recognia}
+Backend Developer, \textsc{Recognia}
 \end{large}
-\hfill Jan-Apr 2016
+\begin{footnotesize}
+Java, Perl, PostgreSQL, AngularJS \hfill Jan-Apr 2016
+\end{footnotesize}
 \begin{itemize}
     \item{Built backend \& API for website for technical analysis of financial instruments}
-    \item{Created new caching strategy, reducing cache misses 60\%}
+    \item{Created new caching strategy, reducing cache misses by 60\%}
 \end{itemize}
-
 \bigskip
+}
 
 \section{Projects}
 \smallskip
-\textsc{Chorus} - Inexpensive High Quality Recording (Capstone Project)
+\begin{large}
+\textsc{Chorus} - Inexpensive High Quality Recording (Capstone Project) \\
+\end{large}
+\begin{footnotesize}
+Python, MATLAB, PyTorch, FASST
+\end{footnotesize}
+\smallskip
 \begin{itemize}
 	\item {Using machine learning and digital signal processing techniques, created a system to allow amateur musicians to record better quality vocal/instrumental tracks using readily available microphones (cell phones, laptops)}
+    \item {Focused on applications for a capella groups, using source separation to allow individual mixing of each voice when recorded together}
 \end{itemize}
 
 \bigskip
 
-\textsc{UW Autonomous Sailboat Team}
+\begin{large}
+\textsc{UW Autonomous Sailboat Team}\\
+\end{large}
+\begin{footnotesize}
+Python
+\end{footnotesize}
+\smallskip
 \begin{itemize}
 	\item {Implemented autonomous path planning software, and created automatic sail trim control system for an RC sailboat in hardware. The boat is to race with zero human input}
 \end{itemize}
@@ -167,9 +200,16 @@ Backend Developer at \textsc{Recognia}
 \section{Technical Skills}
 \medskip
 
-\textsc{Proficient In:} C/C++, Java, SQL, Ruby on Rails \\
-\textsc{Familiar With:} Python, Perl, Verilog, ARM Assembly, Javascript, Bash \\
-\textsc{Tools:} Git, GDB, WinDbg, OpenMP/OpenCL, Valgrind suite, \LaTeX \\
+\renewcommand{\arraystretch}{1.8}
+\begin{tabularx}{\linewidth}{r | X}
+
+\textsc{Proficient} & C/C++, Java, SQL, Ruby on Rails \\
+\textsc{Familiar} & Python, Perl, Verilog, ARM Assembly, Javascript, Bash \\
+\textsc{Tools} & Git, GDB, WinDbg, OpenMP/OpenCL, Valgrind suite, \LaTeX \\
+
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+\medskip
 
 \section{Education}
 \textbf{University of Waterloo}, Waterloo, Canada
