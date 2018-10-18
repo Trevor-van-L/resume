@@ -6,7 +6,7 @@
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[left=0.5in, top=0.5in, right=0.65in, bottom=0.75in]{geometry}
+\usepackage[left=0.5in, top=0.5in, right=0.75in, bottom=0.75in]{geometry}
 \usepackage{multirow}
 
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
@@ -15,8 +15,9 @@
 \usepackage{titlesec}					%custom \section
 
 \usepackage{tabularx}
+\usepackage{enumitem}
 
-%FONTS
+%FONTSs
 \defaultfontfeatures{Mapping=tex-text}
 %\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
 %%% modified for Karol Kozioł for ShareLaTeX use
@@ -59,10 +60,10 @@ ItalicFont = Fontin-Italic.otf
 \par{
     \begin{tabular}{lr}
 
-        \multirow{2}{12.9cm}{\Huge{\textsc{Trevor van Leeuwen}}} & \href{mailto:tvanleeuwen@edu.uwaterloo.ca}{tvanleeuwen@edu.uwaterloo.ca} \\
+        \multirow{2}{12.9cm}{\Huge{\textsc{Trevor van Leeuwen}}} & \href{mailto:vanleeuwen.trevor@gmail.com}{vanleeuwen.trevor@gmail.com} \\
          & +1 (613) 600-7104
     \end{tabular}
-\bigskip\par}
+\medskip\par}
 
 %--------------------SECTIONS-----------------------------------
 
@@ -72,120 +73,113 @@ ItalicFont = Fontin-Italic.otf
 % Inversion of the typical two-column dynamic which I see but makes more sense.
 
 \begin{minipage}[t]{0.6\textwidth} %This will break if we overflow vertically.
+%\raggedright{}
 
 %Section: Work Experience at the top
 \section{Work Experience}
 \medskip
 
-\begin{large}
-File System Developer, \textsc{Microsoft}
-\end{large}\\
-\medskip
-\begin{footnotesize}
+{\large
+\textbf{Microsoft} --- File System Developer\\
+}
+{\footnotesize
 C, C++ \hfill Aug-Dec 2017
-\end{footnotesize}
+}
 \begin{itemize}
-    \item {Desgined \& implemented end-to-end dehydrated cloud file copy protocol in \textbf{NTFS}, saving significant bandwitdth and disk space when a copy is issued on cloud-stored files (i.e. on OneDrive)}
+    \item {Designed \& implemented end-to-end dehydrated cloud file copy protocol in \textbf{NTFS}, saving significant bandwidth and disk space when a copy is issued on cloud-stored files (i.e. on OneDrive)}
     \item {Filed patent on the cloud copying technique}   %TODO: improve phrasing
-    \item {Performance improvements for NTFS handling of primitives with cloud files (moves, deletes)}
-    \item {Improved internal testing tools for cloud file systems, adding significantly more structure and easing integration of new features}
+    %\item {Performance improvements for NTFS handling of primitives with cloud files (moves, deletes)}
+    \item {Improved internal testing tools for cloud file systems, formalising structure and easing integration of new features}
 \end{itemize}
 \bigskip
 
-\begin{large}
-Database Developer, \textsc{Magna International}
-\end{large}\\
-\medskip
-\begin{footnotesize}
-MySQL, VB.NET \hfill Aug-Dec 2016
-\end{footnotesize}
+{\large
+\textbf{Magna International} --- Database Developer\\
+}
+{\footnotesize
+MySQL, VB.NET \hfill Aug -- Dec 2016
+}
 \begin{itemize}
     \item {Overhauled Defect Detection \& Classification system backend to improve mean query time by a factor of 5}
-    \item {Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked. Previously 15\% of defects were not tracked, negatively affecting ability of process \& maintenance teams to fix problems}
+    \item {Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked. Previously 15\% of defects were not being tracked, blocking process \& maintenance teams from fixing problems}
 \comment{    \item {Implemented automatic reconnection for dropped mould HMI connections, saving 10 man-hours per week}}
 \end{itemize}
 \bigskip
 
-\begin{large}
-Full Stack Developer, \textsc{Shopify}
-\end{large}\\
-\medskip
-\begin{footnotesize}
-Ruby on Rails, MySQL \hfill Jan-Apr 2016
-\end{footnotesize}
+{\large
+\textbf{Shopify} --- Full Stack Developer\\
+}
+{\footnotesize
+Ruby on Rails, MySQL \hfill Jan -- Apr 2016
+}
 \begin{itemize}
     \item {Created mobile phone payment method for merchants in developing countries, especially those with low credit card penetration}
-    \item {Improved resiliency of accounting software integrations (Xero \& Intuit), reducing unhandled exceptions by 35\%}
+    \item {Improved resiliency of accounting software integrations, reducing unhandled exceptions by 35\%}
     \item {Created Postmates and UberRush local delivery integrations, allowing merchants to get product to customers within hours}
 \end{itemize}
 \bigskip
 
-\begin{large}
-Android Developer, \textsc{TD Canada Trust}
-\end{large} \\
-\medskip
-\begin{footnotesize}
-Java (Android), PostgreSQL \hfill May-Aug 2015
-\end{footnotesize}
+{\large
+\textbf{Nanometrics} --- Firmware Developer\\
+}
+{\footnotesize
+C++, bash \hfill Sept -- Dec 2014
+}
 \begin{itemize}
-    \item{Prototyped Android apps to explore new technologies applied to banking (e.g. internet of things)}
-\end{itemize}
-\medskip
-
-\comment{
-\begin{large}
-Software/Tool Developer, \textsc{Nanometrics}
-\end{large} \\
-\medskip
-\begin{footnotesize}
-Groovy, C++, bash \hfill Sept-Dec 2014
-\end{footnotesize}
-\begin{itemize}
-    \item {Developed software \& firmware for seismometers}
+    \item {Developed firmware for seismometers}
     \item {Verified \& debugged prototype PCBs}
 \end{itemize}
 \bigskip
+
+{%\large
+\textbf{TD Canada Trust} --- Android Developer \hfill {\footnotesize May -- Aug 2015}\\
+}
+\comment{
+{\footnotesize
+Java (Android), PostgreSQL \hfill May -- Aug 2015\\
+}
+\begin{itemize}
+    \item{Prototyped Android apps to explore new technologies applied to banking (e.g. internet of things)}
+\end{itemize}
 }
 
+{%\large
+\textbf{Recognia} --- Backend Developer \hfill {\footnotesize Jan -- Apr 2014}\\
+}
 \comment{
-\begin{large}
-Backend Developer, \textsc{Recognia}
-\end{large}
-\begin{footnotesize}
-Java, Perl, PostgreSQL, AngularJS \hfill Jan-Apr 2016
-\end{footnotesize}
+{\footnotesize
+Java, Perl, PostgreSQL, AngularJS \hfill Jan  -- Apr 2014\\
+}
 \begin{itemize}
     \item{Built backend \& API for website for technical analysis of financial instruments}
     \item{Created new caching strategy, reducing cache misses by 60\%}
 \end{itemize}
-\bigskip
 }
 
 \section{Projects}
 \smallskip
-\begin{large}
-\textsc{Chorus} - Inexpensive High Quality Recording (Capstone) \\
-\end{large}
-\begin{footnotesize}
+{\large
+\textbf{Chorus} --- Inexpensive High Quality Recording (Capstone) \\
+}
+{\footnotesize
 Python, MATLAB, PyTorch, FASST
-\end{footnotesize}
-\smallskip
+}
 \begin{itemize}
-	\item {Using machine learning and digital signal processing techniques, created a system to allow amateur musicians to record better quality vocals using readily available microphones (cell phones, laptops)}
-    \item {Focused on applications for a capella groups, using source separation to allow independent mixing of voices recorded together}
+	\item {Using machine learning and digital signal processing techniques, created a system to allow amateur musicians to record better quality vocals using cheap, available microphones (cell phones)}
+    \item {Focused on applications for \textit{a capella} groups, using source separation to allow independent mixing of voices recorded together}
 \end{itemize}
 
 \bigskip
 
-\begin{large}
-\textsc{UW Autonomous Sailboat Team}\\
-\end{large}
-\begin{footnotesize}
+{\large
+\textbf{UW Autonomous Sailboat Team}\\
+}
+{\footnotesize
 Python
-\end{footnotesize}
-\smallskip
+}
 \begin{itemize}
-	\item {Implemented autonomous path planning software, and created hardware automatic sail trim system for model sailboat. The boat will race with zero human input}
+	\item {Implemented autonomous path planning software for round-the-buoys races on a 2 metre model sailboat}
+    \item {Created basic automatic sail trim system in hardware}
 \end{itemize}
 
 %-------------------COLUMN TWO---------------------------------
@@ -201,30 +195,35 @@ Python
 
 % Full justification here is weird
 \renewcommand{\arraystretch}{1.8}
-\begin{tabularx}{\linewidth}{r| >{\raggedright}X}
-\textsc{Proficient} & C/C++, Java, SQL, Ruby on Rails \cr
-\textsc{Familiar} & Python, Perl, Bash, Verilog, Javascript \cr
-\textsc{Tools} & Git, \LaTeX, GDB, WinDbg, Valgrind suite, OpenMP \& OpenCL \cr
+\begin{tabularx}{\linewidth}{l| >{\raggedright}X}
+\textsc{Skilled} & C/C++, Java, SQL, Ruby \cr
+\textsc{Familiar} & Python, Perl, Verilog, Javascript \cr
+\textsc{Tools} & Git, GDB, WinDbg, Bash, Valgrind suite, OpenMP \cr
 \end{tabularx}
 \renewcommand{\arraystretch}{1}
 \medskip
 
 \section{Education}
+\smallskip
 \textbf{University of Waterloo}, Canada
 \smallskip
-\begin{itemize}
-    \item{Bachelor of Applied Science, \textsc{\textbf{Computer Engineering}}, 2018. With Distinction}
-    \item {\footnotesize{Key courses: Programming for Performance, Digital Signal and Image Processing, Computer Architecture, Embedded Systems, Computer Security, Operating Systems, Data Structures and Algorithms}}
+\begin{itemize}[leftmargin=0.125in]
+\item{Bachelor of Applied Science, 2018\\
+\textsc{Computer Engineering}
+\\
+With Distinction}
+\item{{\footnotesize Key courses: Programming for Performance, Digital Signal and Image Processing, Computer Architecture, Embedded Systems}}
 \end{itemize}
 
 \medskip
 
-\section{Interests and Activities}
+\section{Interests}
 \medskip
-\begin{itemize}
-	\item {Leadership roles in UWaterloo Orientation Week, Engineering Society \& Graduation Committee}
-	\item {Competitive collegiate e-sports: Team co-ordinator for UW Heroes of the Storm, Team captain for Hearthstone}
-	\item {Competitive sailor, avid cross-country skier, amateur saxophone player}
+\begin{itemize}[leftmargin=0.125in]
+	\item {Proven leadership, with roles in UW Orientation Week, Engineering Society \& Graduation Committee}
+	\item {Team manager for UW Heroes of the Storm (esports)}
+	\item {Competitive sailor}
+    \item {Cross-country ski coach}
     \item {Fluent in English and French, basic knowledge of Dutch}
 \end{itemize}
 
