@@ -1,5 +1,11 @@
-My personal resume, written in LaTeX.
+How to use:
 
-Fonts borrowed from Alessandro Plasmati's template: https://www.sharelatex.com/templates/cv-or-resume/professional-cv
+1. [Install TeXLive][http://www.tug.org/texlive/] for XeTeX
 
-Two-column method borrowed from deedy-resume: https://github.com/deedy/Deedy-Resume
+2. In a terminal, `xelatex resume`
+
+Motivation to do it in latex from [Patrick Perrier][https://github.com/pperrier27]
+
+Two-column method borrowed from [deedy-resume][https://github.com/deedy/Deedy-Resume]
+
+Initial constructs & fonts borrowed from [Alessandro Plasmati's template][ https://www.sharelatex.com/templates/cv-or-resume/professional-cv]
