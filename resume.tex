@@ -5,7 +5,6 @@
 %%     Feel free to use and modify as you see fit     %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 %A Few Useful Packages
 \usepackage{marvosym}
 \usepackage{fontspec} 					%for loading fonts
@@ -14,6 +13,7 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[left=0.5in, top=0.5in, right=0.75in, bottom=0.75in]{geometry}
 \usepackage{multirow}
+\usepackage{changepage}
 
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
 
@@ -45,12 +45,6 @@ ItalicFont = Fontin-Italic.otf
 \textblockorigin{2mm}{0.60\paperheight}
 \setlength{\parindent}{0pt}
 
-%% define a few struts
-%% (from code by Claudio Beccari in TeX and TUG News, Vol. 2, 1993)
-\newcommand\Tstrut{\rule{0pt}{2.9ex}}         % "top" strut
-\newcommand\Bstrut{\rule[-1.2ex]{0pt}{0pt}}   % "bottom" strut
-\newcommand\TBstrut{\Tstrut\Bstrut}           % "top and bottom" strut
-
 %% for multiline comments -- excluding old jobs, but keeping data for e.g. CV
 %% in future can use ifs for toggling on/off
 \newcommand{\comment}[1]{}
@@ -63,13 +57,15 @@ ItalicFont = Fontin-Italic.otf
 \font\fb=''[cmr10]'' %for use with \LaTeX command
 
 %--------------------TITLE-------------
+\begin{adjustwidth}{-0.2cm}{}
 \par{
     \begin{tabular}{lr}
 
-        \multirow{2}{12.9cm}{\Huge{\textsc{Trevor van Leeuwen}}} & \href{mailto:vanleeuwen.trevor@gmail.com}{vanleeuwen.trevor@gmail.com} \\
+        \multirow{2}{13.15cm}{\Huge{\textsc{Trevor van Leeuwen}}} & \href{mailto:vanleeuwen.trevor@gmail.com}{vanleeuwen.trevor@gmail.com} \\
          & +1 (613) 600-7104
     \end{tabular}
 \medskip\par}
+\end{adjustwidth}
 
 %--------------------SECTIONS-----------------------------------
 
@@ -89,10 +85,10 @@ ItalicFont = Fontin-Italic.otf
 \textbf{Microsoft} --- File System Developer\\
 }
 {\footnotesize
-C, C++ \hfill Aug-Dec 2017
+C, C++ \hfill Aug -- Dec 2017
 }
 \begin{itemize}
-    \item {Designed \& implemented end-to-end dehydrated cloud file copy protocol in \textbf{NTFS}, saving significant bandwidth and disk space when a copy is issued on cloud-stored files (i.e. on OneDrive)}
+    \item {Designed and implemented end-to-end dehydrated cloud file copy protocol in \textbf{NTFS}, saving significant bandwidth and disk space when a copy is issued on cloud-stored files (i.e. on OneDrive)}
     \item {Filed patent on the cloud copying technique}   %TODO: improve phrasing
     %\item {Performance improvements for NTFS handling of primitives with cloud files (moves, deletes)}
     \item {Improved internal testing tools for cloud file systems, formalising structure and easing integration of new features}
@@ -107,7 +103,7 @@ MySQL, VB.NET \hfill Aug -- Dec 2016
 }
 \begin{itemize}
     \item {Overhauled Defect Detection \& Classification system backend to improve mean query time by a factor of 5}
-    \item {Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked. Previously 15\% of defects were not being tracked, blocking process \& maintenance teams from fixing problems}
+    \item {Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked. Previously 15\% of defects were not being tracked, blocking process and maintenance teams from fixing problems}
 \comment{    \item {Implemented automatic reconnection for dropped mould HMI connections, saving 10 man-hours per week}}
 \end{itemize}
 \bigskip
@@ -137,7 +133,7 @@ C++, bash \hfill Sept -- Dec 2014
 \end{itemize}
 \bigskip
 
-{%\large
+{\large
 \textbf{TD Canada Trust} --- Android Developer \hfill {\footnotesize May -- Aug 2015}\\
 }
 \comment{
@@ -149,7 +145,7 @@ Java (Android), PostgreSQL \hfill May -- Aug 2015\\
 \end{itemize}
 }
 
-{%\large
+{\large
 \textbf{Recognia} --- Backend Developer \hfill {\footnotesize Jan -- Apr 2014}\\
 }
 \comment{
@@ -157,7 +153,7 @@ Java (Android), PostgreSQL \hfill May -- Aug 2015\\
 Java, Perl, PostgreSQL, AngularJS \hfill Jan  -- Apr 2014\\
 }
 \begin{itemize}
-    \item{Built backend \& API for website for technical analysis of financial instruments}
+    \item{Built backend and API for website for technical analysis of financial instruments}
     \item{Created new caching strategy, reducing cache misses by 60\%}
 \end{itemize}
 }
@@ -185,7 +181,7 @@ Python
 }
 \begin{itemize}
 	\item {Implemented autonomous path planning software for round-the-buoys races on a 2 metre model sailboat}
-    \item {Created basic automatic sail trim system in hardware}
+    \item {Created automatic sail trim system in hardware}
 \end{itemize}
 
 %-------------------COLUMN TWO---------------------------------
@@ -199,12 +195,14 @@ Python
 \section{Technical Skills}
 \medskip
 
-\renewcommand{\arraystretch}{1.35}   %otherwise it's super cramped
+\renewcommand{\arraystretch}{1.35}
+\begin{adjustwidth}{-0.19cm}{}
 \begin{tabularx}{\linewidth}{l| >{\raggedright}X}
 \textsc{Skilled} & C/C++, Java, SQL, Ruby \cr
 \textsc{Familiar} & Python, Perl, Verilog, Javascript \cr
 \textsc{Tools} & Git, GDB, WinDbg, Bash, Valgrind suite, OpenMP \cr
 \end{tabularx}
+\end{adjustwidth}
 \renewcommand{\arraystretch}{1}
 \medskip
 
@@ -224,11 +222,11 @@ Python
 \section{Interests}
 \medskip
 \begin{itemize}[leftmargin=0.125in]
-	\item {Proven leadership, with roles in UW Orientation Week, Engineering Society \& Graduation Committee}
+	\item {Proven leadership, with roles in UW Orientation Week, Engineering Society and Graduation Committee}
 	\item {Team manager for UW Heroes of the Storm (esports)}
 	\item {Competitive sailor}
-    \item {Cross-country ski coach}
-    \item {Fluent in English and French, basic knowledge of Dutch}
+    \item {Nordic ski coach}
+    \item {Fluent in English and French, \\basic knowledge of Dutch}
 \end{itemize}
 
 
