@@ -97,20 +97,21 @@
 % Inversion of the typical two-column dynamic which I see but makes more sense.
 
 \begin{minipage}[t]{0.6\textwidth} %This will break if we overflow vertically. Need to use a page break if you want two pages
-%\raggedright{}
+
 
 %Section: Work Experience at the top
 \section{Work Experience}
 \medskip
 
-\jobtitle{Qualcomm}{Audio Framework Engineer}{C, C++, C\#, python}{April 2019 -- Present}
+\jobtitle{Qualcomm}{Engineer}{C, C++, C\#, python}{April 2019 -- Present}
 \begin{itemize}
-    \item{GSL
-  \comment{ \item {Developed an IPC layer which supports real-time voice \& audio communicaton across DSP, modem and Application processors on Snapdragon SoC. }}
-    \item {TODO: Codec 2.0?}
-    \item {Created debugging tool to parse binary packet log dumps into human-readable}
-    \item {TODO: Intern mentorships}
-    \item {TODO:}
+    \item{Developed audio management layer which controls life-cycle of all audio use-cases on DSP. Interfaces between main processor to DSP for all DSPs and all OSs supported by Qualcomm, as part of larger audio redesign. Commercialized on Snapdragon 898}
+    \item{Migrated management layer to internal open-source product. Mentored \& empowered other engineers to contribute}
+    \item {Built performant management system for ad-hoc data memory allocation as part of Android Codec 2.0. Prior system required data memory allocation at use-case setup}
+    \item {Created debugging tool to log binary communication between processors and create human-readable sequences, with automatic error detection}
+    \item {Mentored 3 interns, helped onboard \& orient several new hires}
+\comment{\item{TODO: ACD. Impact statements. Name GSL? More on what GSL does? Double indented list?}
+}
 \end{itemize}
 \bigskip
 
@@ -129,19 +130,21 @@
 \end{itemize}
 \bigskip
 
-\jobtitle{Shopify}{Full Stack Developer}{Ruby on Rails, MySQL}{Jan -- Apr 2016}
+\shorttitle{Shopify}{Full Stack Developer}{Ruby on Rails, MySQL}{Jan -- Apr 2016}
+\comment{
 \begin{itemize}
     \item {Created mobile phone payment method for merchants in developing countries, especially those with low credit card penetration}
-    \item {Improved resiliency of accounting software integrations, reducing unhandled exceptions by 35\%}
-    \item {Created Postmates and UberRush local delivery integrations, allowing merchants to get product to customers within hours}
+    \item {Created Postmates and UberRush local delivery integrations}
 \end{itemize}
 \bigskip
+}
 
 \shorttitle{TD Canada Trust}{Android Developer}{Java, AngularJS}{May -- Aug 2015}
 \comment{
 \begin{itemize}
     \item{Prototyped Android apps to explore new technologies applied to banking (e.g. internet of things)}
 \end{itemize}
+\bigskip
 }
 
 \shorttitle{Nanometrics}{Firmware Developer}{C++, bash}{Sept -- Dec 2014}
