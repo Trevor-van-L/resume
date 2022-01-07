@@ -72,6 +72,20 @@
     \\
 }
 
+%% for sidebar job titles
+%% 1: Company
+%% 2: Job title
+%% 3: Ignored, kept for ease of changing between \jobtitle and \tinytitle
+%%4: Dates
+\newcommand{\tinytitle}[4]{
+    {\large \textbf{#1}}
+    \hfill
+    {\footnotesize#4}
+    \\
+    #2
+    \\
+}
+
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
 
@@ -103,15 +117,30 @@
 \section{Work Experience}
 \medskip
 
-\jobtitle{Qualcomm}{Engineer}{C, C++, C\#, python}{April 2019 -- Present}
+\jobtitle{Qualcomm}{Engineer, Audio Frameworks}{C, C++, C\#, python}{April 2019 -- Present}
+\smallskip
+\\
+\textbf{Common Audio Driver}
+\\
+Developed DSP driver common to all Qualcomm chips and OSs as part of broad audio framework rearchitecture. Driver is responsible for setup of usecase and data transfer to DSP, abstracting the DSP interface
+
 \begin{itemize}
-    \item{Developed audio management layer which controls life-cycle of all audio use-cases on DSP. Interfaces between main processor to DSP for all DSPs and all OSs supported by Qualcomm, as part of larger audio redesign. Commercialized on Snapdragon 898}
-    \item{Migrated management layer to internal open-source product. Mentored \& empowered other engineers to contribute}
-    \item {Built performant management system for ad-hoc data memory allocation as part of Android Codec 2.0. Prior system required data memory allocation at use-case setup}
+    \item {Built performant, low-profile and modular code using restricted language set to support of range of SoCs, including IoT/embedded}
+    \item {Built performant memory management system for ad-hoc data memory allocation as part of Android Codec 2.0. Prior system required data memory allocation at use-case setup} \comment{link https://ignitarium.com/android-codec-2-0-developing-multimedia-applications-for-newer-android-platforms/}
+    \item{Migrated common driver to internal open-source product. Mentored \& empowered other engineers to contribute and debug}
+\end{itemize}
+
+\textbf{Audio Context Detection}
+\begin{itemize}
+	\item {todo}
+
+\end{itemize}
+\textbf{Tools \& Mentoring}
+\begin{itemize}
     \item {Created debugging tool to log binary communication between processors and create human-readable sequences, with automatic error detection}
     \item {Mentored 3 interns, helped onboard \& orient several new hires}
-\comment{\item{TODO: ACD. Impact statements. Name GSL? More on what GSL does? Double indented list?}
-}
+\comment{TODO: ACD. Impact statements. Name GSL? More on what GSL does? Double indented list?}
+
 \end{itemize}
 \bigskip
 
@@ -125,48 +154,10 @@
 \jobtitle{Magna International}{Database Developer}{MySQL, VB.NET}{Aug -- Dec 2016}
 \begin{itemize}
     \item {Overhauled Defect Detection \& Classification system backend to improve mean query time by a factor of 5}
-    \item {Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked. Previously 15\% of defects were not being tracked, blocking process and maintenance teams from fixing problems}
+    \item {Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked. Previously 15\% of defects were not tracked}
 \comment{    \item {Implemented automatic reconnection for dropped mould HMI connections, saving 10 man-hours per week}}
 \end{itemize}
 \bigskip
-
-\shorttitle{Shopify}{Full Stack Developer}{Ruby on Rails, MySQL}{Jan -- Apr 2016}
-\comment{
-\begin{itemize}
-    \item {Created mobile phone payment method for merchants in developing countries, especially those with low credit card penetration}
-    \item {Created Postmates and UberRush local delivery integrations}
-\end{itemize}
-\bigskip
-}
-
-\shorttitle{TD Canada Trust}{Android Developer}{Java, AngularJS}{May -- Aug 2015}
-\comment{
-\begin{itemize}
-    \item{Prototyped Android apps to explore new technologies applied to banking (e.g. internet of things)}
-\end{itemize}
-\bigskip
-}
-
-\shorttitle{Nanometrics}{Firmware Developer}{C++, bash}{Sept -- Dec 2014}
-\comment{
-\begin{itemize}
-    \item {Developed firmware for seismometers}
-    \item {Verified \& debugged prototype PCBs}
-\end{itemize}
-\bigskip
-}
-
-
-\shorttitle{Recognia}{Backend Developer}{Java, Perl, PostgreSQL, AngularJS}{Jan -- Apr 2014}
-\comment{
-{\footnotesize
- \hfill Jan  -- Apr 2014\\
-}
-\begin{itemize}
-    \item{Built backend and API for website for technical analysis of financial instruments}
-    \item{Created new caching strategy, reducing cache misses by 60\%}
-\end{itemize}
-}
 
 \section{Projects}
 \smallskip
@@ -182,6 +173,8 @@ Python, MATLAB, PyTorch, FASST
 \end{itemize}
 
 \bigskip
+
+\comment{todo: MHCT?}
 
 \comment{
 {\large
@@ -232,13 +225,56 @@ Python
 
 \section{Interests}
 \medskip
+
 \begin{itemize}[leftmargin=0.125in]
-    \item {Competitive sailor}
-    \item {Proven leadership, with roles in UW Orientation Week, Engineering Society and Graduation Committee}
+    \item {Competitive sailor. Dinghy, inshore keelboat and ocean racing}
+    \item {Leadership roles roles in Qualcomm new grad network, UW Orientation Week, UW grad committee}
     \item {Nordic ski coach}
+    \item {Calligraphy}
     \item {Fluent in English and French, \\basic knowledge of Dutch}
 \end{itemize}
 
+\medskip
+\section{Other Internships}
+\medskip
+
+\tinytitle{Shopify}{Full Stack Developer}{Ruby on Rails, MySQL}{Jan -- Apr 2016}
+\comment{
+\begin{itemize}
+    \item {Created mobile phone payment method for merchants in developing countries, especially those with low credit card penetration}
+    \item {Created Postmates and UberRush local delivery integrations}
+\end{itemize}
+\bigskip
+}
+
+\tinytitle{TD Canada Trust}{Android Developer}{Java, AngularJS}{May -- Aug 2015}
+\comment{
+\begin{itemize}
+    \item{Prototyped Android apps to explore new technologies applied to banking (e.g. internet of things)}
+\end{itemize}
+\bigskip
+}
+
+\tinytitle{Nanometrics}{Firmware Developer}{C++, bash}{Sept -- Dec 2014}
+\comment{
+\begin{itemize}
+    \item {Developed firmware for seismometers}
+    \item {Verified \& debugged prototype PCBs}
+\end{itemize}
+\bigskip
+}
+
+
+\tinytitle{Recognia}{Backend Developer}{Java, Perl, PostgreSQL, AngularJS}{Jan -- Apr 2014}
+\comment{
+{\footnotesize
+ \hfill Jan  -- Apr 2014\\
+}
+\begin{itemize}
+    \item{Built backend and API for website for technical analysis of financial instruments}
+    \item{Created new caching strategy, reducing cache misses by 60\%}
+\end{itemize}
+}
 
 \end{minipage}
 
