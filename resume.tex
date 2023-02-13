@@ -117,29 +117,31 @@
 \section{Work Experience}
 \medskip
 
-\jobtitle{Qualcomm}{Engineer, Audio Software}{C, C++, C\#, python}{April 2019 -- Present}
+\jobtitle{Qualcomm}{Engineer, Linux Audio Software}{C, C++, python, C\#}{April 2019 -- Present}
 \smallskip
 \\
-\textbf{Common Audio Driver}
+\textbf{Common Audio Driver (AudioReach)}
 \\
 Developed audio DSP driver common to all Qualcomm chips and OSs as part of broad audio framework rearchitecture (AudioReach). Driver is responsible for setup of usecase and data transfer to DSP, abstracting the DSP interface
 
 \begin{itemize}
-    \item {Built performant, low-profile and modular code using restricted language set to support of range of SoCs, including IoT/embedded}
-    \item {Designed \& built memory management system for ad-hoc data memory allocation as part of Android Codec 2.0. Prior system required data memory allocation at use-case setup} \comment{link https://ignitarium.com/android-codec-2-0-developing-multimedia-applications-for-newer-android-platforms/}
-    \item{Migrated common driver to internal open-source product. Mentored \& empowered other engineers to contribute and debug}
+    \item {Built performant, low-profile and modular driver using restricted language set to support full range of SoCs, including IoT and Auto}
+    \item {Component owner for DSP management layer. Ensured quality of contributions. Point of contact for complex bugs} \comment{involving DSP + high level OS interactions}
+    \item {Designed \& built memory management system for ad-hoc data memory allocation for Android Codec 2.0. Prior system required data memory allocation at use-case setup} 
 \end{itemize}
-
-\textbf{Open Source Framework}
+\smallskip
+\textbf{Open Source AudioReach Framework}
 \\
-Released AudioReach framework as open source project
+Released AudioReach framework as internal open source project. Working towards release as external open source project.
 \begin{itemize}
-	\item{Adapted Android code into generic linux base}
+	\item {Adapted Android and DSP code into generic linux base. Moved build system to CMake from custom internal tool}
+	\item {Ensured quality in contributions from wide user base by implemented procedures and automation for tests, style, and builds}
+	\item {Ensured compliance and safety of public framework release through work with open source legal team}
 \end{itemize}
-
+\smallskip
 \textbf{Tools \& Mentoring}
 \begin{itemize}
-    \item {Created debugging tool to log binary communication between processors and create human-readable sequences, with automatic error detection}
+    \item {Created debugging tool to log communication between processors and make it human-readable, with automatic error detection}
     \item {Mentored 3 interns, helped onboard \& orient several new hires}
 \comment{TODO: Impact statements. Double indented list?}
 
@@ -148,7 +150,7 @@ Released AudioReach framework as open source project
 
 \jobtitle{Microsoft}{File System Developer}{C, C++ }{Aug -- Dec 2017}
 \begin{itemize}
-    \item {Designed and implemented dehydrated cloud file copy protocol, saving significant bandwidth and disk space when a copy is issued on cloud-stored files (i.e. on OneDrive)}
+    \item {Implemented dehydrated cloud file copy protocol, saving significant bandwidth and disk space when copying cloud-stored files}
     \item {Filed patent on the cloud copying technique}   %TODO: improve phrasing
 \end{itemize}
 \bigskip
@@ -156,8 +158,7 @@ Released AudioReach framework as open source project
 \jobtitle{Magna International}{Database Developer}{MySQL, VB.NET}{Aug -- Dec 2016}
 \begin{itemize}
     \item {Overhauled Defect Detection \& Classification system backend to improve mean query time by a factor of 5}
-    \item {Optimised database server job scheduling to reduce performance bottlenecks, allowing all defects to be properly tracked. Previously 15\% of defects were not tracked}
-\comment{    \item {Implemented automatic reconnection for dropped mould HMI connections, saving 10 man-hours per week}}
+    \item {Optimised job scheduling to reduce bottlenecks, allowing all defects to be tracked. Previously 15\% of defects were not tracked}
 \end{itemize}
 \bigskip
 
@@ -217,9 +218,10 @@ Python
 \renewcommand{\arraystretch}{1.35}  %% setting up the mini table
 \begin{adjustwidth}{-0.19cm}{}
 \begin{tabularx}{\linewidth}{l| >{\raggedright}X}
-    \textsc{Skilled} & C/C++, Java, SQL \cr
-    \textsc{Familiar} & Python, Perl, C\#, Javascript \cr
-    \textsc{Tools} & Git, P4, GDB, WinDbg, Bash, Valgrind suite \cr
+    \textsc{Skilled} & C/C++, SQL \cr
+    \textsc{Familiar} & Python, bash, Java, C\# \cr
+    \textsc{Tools} & Git, P4, GDB, Bash, Valgrind \cr
+    \textsc{Concepts} & 
 \end{tabularx}
 \end{adjustwidth}
 \renewcommand{\arraystretch}{1}
