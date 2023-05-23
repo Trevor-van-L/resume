@@ -122,27 +122,28 @@
 \\
 \textbf{Common Audio Driver (AudioReach)}
 \\
-Developed audio DSP driver common to all Qualcomm chips and OSs as part of broad audio framework rearchitecture (AudioReach). Driver is responsible for setup of use-case and data transfer to DSP, abstracting the DSP interface
-
+Developed audio DSP driver common to all Qualcomm chips and OSs as part of broad audio framework rearchitecture (AudioReach). Commercialized on Snapdragon 8 Gen 1. Driver component is responsible for setup of use-case and data transfer to DSP, abstracting DSP interface
 \begin{itemize}
-    \item {Built performant, low-profile and modular driver using restricted language set to support full range of SoCs, including IoT and Auto}
-    \item {Owned DSP management layer component. Ensured quality of contributions. Point of contact for complex bugs}
-    \item {Designed \& built memory management system for ad-hoc data memory allocation for Android Codec 2.0. Prior system required data memory allocation at use-case setup} 
+    \item {Owned DSP management layer component. Designed new APIs \& interactions. Point of contact for complex bugs, particularly for multiple DSP scenarios}
+    \item {Built performant, low-profile, modular driver using restricted language set to support full range of SoCs, including IoT and Auto}
+\comment{    \item {Designed \& built memory management system for ad-hoc data memory allocation for Android Codec 2.0. Prior system required allocation at use-case setup}  }
+    \item {Created extensible error detection mechanism to recover from fatal scenarios without device restart}
 \end{itemize}
 \smallskip
 \textbf{Open Source AudioReach Framework}
 \\
 Released AudioReach framework as internal open source project. Working towards release as external open source project
 \begin{itemize}
-	\item {Adapted Android and DSP code into generic linux base. Moved build system to CMake from custom internal tool}
+	\item {Adapted DSP code and build into generic linux base. Set up dynamic loading for open source portion of DSP framework code }
 	\item {Ensured quality in contributions from wide user base by implementing procedures and automation for tests, style, and builds}
-	\item {Ensured compliance and safety of public framework release through work with open source legal team}
+	\item {Managed contributions from globally distributed teams}
 \end{itemize}
 \smallskip
-\textbf{Tools \& Mentoring}
+\textbf{Tools}
 \begin{itemize}
-    \item {Created debugging tool to log communication between processors and make it human-readable, with automatic error detection}
-    \item {Mentored 3 interns, helped onboard \& orient several new hires}
+    \item {Managed remote device pool, allowing developers access to latest device hardware from their remote workplaces}
+    \item {Created debugging tool to log binary command packets and make them human-readable, with automatic error detection}
+
 \comment{TODO: Impact statements. Double indented list?}
 
 \end{itemize}
@@ -280,6 +281,14 @@ Python
     \item{Created new caching strategy, reducing cache misses by 60\%}
 \end{itemize}
 }
+
+\medskip
+\section{Work Authorization}
+\begin{itemize}[leftmargin=0.125in]
+    \item{Canadian citizen}
+    \item{Irish citizen}
+    \item{H-1B valid through 2026}
+\end{itemize}
 
 \end{minipage}
 
