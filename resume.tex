@@ -101,6 +101,7 @@
          & +1 (619) 885-3927
     \end{tabular}
 \medskip\par}
+
 \end{adjustwidth}
 
 %--------------------SECTIONS-----------------------------------
@@ -122,28 +123,24 @@
 \\
 \textbf{Common Audio Driver (AudioReach)}
 \\
-Developed audio DSP driver common to all Qualcomm chips and OSs as part of broad audio framework rearchitecture (AudioReach). Commercialized on Snapdragon 8 Gen 1. Driver component is responsible for setup of use-case and data transfer to DSP, abstracting DSP interface
-\begin{itemize}
-    \item {Owned DSP management layer component. Designed new APIs \& interactions. Point of contact for complex bugs, particularly for multiple DSP scenarios}
-    \item {Built performant, low-profile, modular driver using restricted language set to support full range of SoCs, including IoT and Auto}
-\comment{    \item {Designed \& built memory management system for ad-hoc data memory allocation for Android Codec 2.0. Prior system required allocation at use-case setup}  }
-    \item {Created extensible error detection mechanism to recover from fatal scenarios without device restart}
-\end{itemize}
+Developed driver for signal processing framework common across all Qualcomm chips and OSes, as part of broad audio framework rearchitecture (AudioReach).
+This central component (GSL) abstracts the DSP interface to provide use-case level control APIs, and is the entry point to the new framework architecture
 \smallskip
-\textbf{Open Source AudioReach Framework}
-\\
-Released AudioReach framework as internal open source project. Working towards release as external open source project
 \begin{itemize}
-	\item {Adapted DSP code and build into generic linux base. Set up dynamic loading for open source portion of DSP framework code }
-	\item {Ensured quality in contributions from wide user base by implementing procedures and automation for tests, style, and builds}
-	\item {Managed contributions from globally distributed teams}
+    \item {GSL component maintainer: managed and guided contributions from globally distributed teams using internal open source model}
+    \item {Balanced complex requirements of different OSes and platforms to create low-profile modular component with support for broad variety of device configurations}
+    \item {Designed features needing interaction between many other components, ensuring features will work for novel device setups and adaptations}
+\comment{    \item {Built performant shared memory management with no memcpy and minimal mapping to support run-time application-level memory management for Android Codec 2.0} }
+\comment{    \item {Created extensible error detection mechanism to recover from fatal scenarios without device restart} }
 \end{itemize}
-\smallskip
-\textbf{Tools}
-\begin{itemize}
-    \item {Managed remote device pool, allowing developers access to latest device hardware from their remote workplaces}
-    \item {Created debugging tool to log binary command packets and make them human-readable, with automatic error detection}
 
+\smallskip
+\textbf{Tools \& Mentorship}
+\begin{itemize}
+    \item {Created debugging tool to log binary command packets and make them human-readable, with automatic error detection}
+    \item {Trained members from device teams on GSL component to improve their ability to develop, and to improve use of internal open source workflow}
+    \item {Mentored 3 interns and several new audio team members}
+    
 \comment{TODO: Impact statements. Double indented list?}
 
 \end{itemize}
@@ -285,9 +282,10 @@ Python
 \medskip
 \section{Work Authorization}
 \begin{itemize}[leftmargin=0.125in]
+    \item{H-1B valid through 2026}
     \item{Canadian citizen}
     \item{Irish citizen}
-    \item{H-1B valid through 2026}
+
 \end{itemize}
 
 \end{minipage}
