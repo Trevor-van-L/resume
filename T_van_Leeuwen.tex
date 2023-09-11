@@ -11,7 +11,7 @@
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[left=0.5in, top=0.5in, right=0.75in, bottom=0.75in]{geometry}
+\usepackage[left=0.6in, top=0.65in, right=0.6in, bottom=0.65in]{geometry}
 \usepackage{multirow}
 \usepackage{changepage}
 
@@ -110,35 +110,36 @@
 % Other stuff (less impressive but still important) goes in column two, which is read second
 % Inversion of the typical two-column dynamic which I see but makes more sense.
 
-\begin{minipage}[t]{0.6\textwidth} %This will break if we overflow vertically. Need to use a page break if you want two pages
+\begin{minipage}[t]{0.66\textwidth} %This will break if we overflow vertically. Need to use a page break if you want two pages
 
 
 %Section: Work Experience at the top
 \section{Work Experience}
 \medskip
 
-\jobtitle{Qualcomm}{Engineer, Linux Audio Software}{C, C++, Python}{Apr 2019 -- Present}
+\jobtitle{Qualcomm}{Engineer, Linux Audio Software}{C, C++, Python}{Apr 2019 -- July 2023}
 \smallskip
 \\
 \textbf{Common Audio Driver (AudioReach)}
 \\
 Developed driver for signal processing framework common across all Qualcomm chips and OSes, as part of broad audio framework rearchitecture (AudioReach).
-This central component (GSL) abstracts the DSP interface to provide use-case level control APIs, and is the entry point to the new framework architecture
+This central component (GSL) abstracts the DSP interface to provide use-case level control APIs, and is the entry point to the new framework
 \smallskip
 \begin{itemize}
     \item {GSL component maintainer: managed and guided contributions from globally distributed teams using internal open source model}
     \item {Balanced complex requirements of different OSes and platforms to create low-profile modular component with support for broad variety of device configurations}
-    \item {Designed features needing interaction between many other components, ensuring features will work for novel device setups and adaptations}
-\comment{    \item {Built performant shared memory management with no memcpy and minimal mapping to support run-time application-level memory management for Android Codec 2.0} }
-\comment{    \item {Created extensible error detection mechanism to recover from fatal scenarios without device restart} }
+    \item {Created extensible error detection mechanism to recover from fatal scenarios without device restart}
+    \item {Implemented data transfer mode using run-time application-layer-allocated memory with no memcpy for Android Codec 2.0. Optimized this mode to meet power \& latency KPIs of modes which use setup-time driver-allocated memory}
+\comment{    \item {Designed features needing interaction between many other components, ensuring features will work for novel device setups and adaptations}}
+
+
 \end{itemize}
 
 \smallskip
 \textbf{Tools \& Mentorship}
 \begin{itemize}
-    \item {Created debugging tool to log binary command packets and make them human-readable, with automatic error detection}
-    \item {Trained members from device teams on GSL component to improve their ability to develop, and to improve use of internal open source workflow}
-    \item {Mentored 3 interns and several new audio team members}
+    \item {Created debugging tool to log binary command packets and make them human-readable, with automatic error detection. Elimintated significant dev time spent looking through binary packet dumps, and improved ability of external customer teams to extend AudioReach framework}
+    \item {Trained members from device teams on GSL component to improve their ability to develop new features, accelerating time from design to completion. Refined workflows to move framework towards full open source}
     
 \comment{TODO: Impact statements. Quantify. Double indented list?}
 
@@ -192,7 +193,7 @@ Python
 
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.34\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
 
 % Second column is for personal info
 
@@ -214,12 +215,13 @@ Python
 \medskip
 
 \renewcommand{\arraystretch}{1.35}  %% setting up the mini table
+\def\tabularxcolumn#1{m{#1}}
 \begin{adjustwidth}{-0.19cm}{}
 \begin{tabularx}{\linewidth}{l| >{\raggedright}X}
     \textsc{Skilled} & C/C++, SQL \cr
-    \textsc{Familiar} & Python, Java, C\# \cr
+    \textsc{Familiar} & Python, MATLAB, C\# \cr
     \textsc{Tools} & Git, P4, GDB, Valgrind, Bash, Linux, Jenkins \cr
-    \textsc{Concepts} & Embedded, Operating Systems, DSP, Power \& Memory Optimization,
+    \textsc{Concepts} & DSP, Embedded, Operating Systems, Kernel Drivers, Latency, Memory \& Power Optimization
 \end{tabularx}
 \end{adjustwidth}
 \renewcommand{\arraystretch}{1}
@@ -230,9 +232,8 @@ Python
 
 \begin{itemize}[leftmargin=0.125in]
     \item {Competitive sailor}
-    \item {Leadership roles in Qualcomm's New Grad Network, UW Orientation Week, UW Grad Committee}
-    \item {Nordic ski coach}
     \item {Calligraphy}
+    \item {Leadership roles in Qualcomm's New Grad Network, UW Orientation Week, UW Grad Committee}
     \item {Fluent in English and French, \\basic knowledge of Dutch}
 \end{itemize}
 
@@ -240,7 +241,7 @@ Python
 \section{Other Internships}
 \medskip
 
-\tinytitle{Shopify}{Full Stack Developer Intern}{Ruby on Rails, MySQL}{Jan -- Apr 2016}
+\tinytitle{Shopify}{Full Stack Developer}{Ruby on Rails, MySQL}{Jan -- Apr 2016}
 \comment{
 \begin{itemize}
     \item {Created mobile phone payment method for merchants in developing countries, especially those with low credit card penetration}
@@ -249,7 +250,7 @@ Python
 \bigskip
 }
 
-\tinytitle{TD Canada Trust}{Android Developer Intern}{Java, AngularJS}{May -- Aug 2015}
+\tinytitle{TD Canada Trust}{Android Developer}{Java, AngularJS}{May -- Aug 2015}
 \comment{
 \begin{itemize}
     \item{Prototyped Android apps to explore new technologies applied to banking (e.g. internet of things)}
@@ -257,7 +258,7 @@ Python
 \bigskip
 }
 
-\tinytitle{Nanometrics}{Firmware Developer Intern}{C++, bash}{Sept -- Dec 2014}
+\tinytitle{Nanometrics}{Firmware Developer}{C++, bash}{Sept -- Dec 2014}
 \comment{
 \begin{itemize}
     \item {Developed firmware for seismometers}
@@ -267,7 +268,7 @@ Python
 }
 
 
-\tinytitle{Recognia}{Backend Developer Intern}{Java, Perl, PostgreSQL, AngularJS}{Jan -- Apr 2014}
+\tinytitle{Recognia}{Backend Developer}{Java, Perl, PostgreSQL, AngularJS}{Jan -- Apr 2014}
 \comment{
 {\footnotesize
  \hfill Jan  -- Apr 2014\\
@@ -277,15 +278,6 @@ Python
     \item{Created new caching strategy, reducing cache misses by 60\%}
 \end{itemize}
 }
-
-\medskip
-\section{Work Authorization}
-\begin{itemize}[leftmargin=0.125in]
-    \item{H-1B valid through 2026}
-    \item{Canadian citizen}
-    \item{Irish citizen}
-
-\end{itemize}
 
 \end{minipage}
 
